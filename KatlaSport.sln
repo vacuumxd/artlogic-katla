@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2043
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatlaSport.WebApi", "KatlaSport.WebApi\KatlaSport.WebApi.csproj", "{2AED0D94-B116-41E2-B5A0-C8CE7F5B0407}"
 EndProject
@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatlaSport.Services.Tests", "KatlaSport.Services.Tests\KatlaSport.Services.Tests.csproj", "{0D7F6077-1217-4DF1-A821-E20160262CDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatlaSport.Services.Models", "KatlaSport.Services.Models\KatlaSport.Services.Models.csproj", "{FBCA4661-79C9-4B45-9361-430B0C84F5EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{965B0A8D-6152-4C16-AB55-F49328FE0933}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
