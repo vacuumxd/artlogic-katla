@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS8019: Unnecessary using directive
+dotnet_diagnostic.CS8019.severity = none
