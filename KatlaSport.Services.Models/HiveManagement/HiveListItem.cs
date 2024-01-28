@@ -5,6 +5,7 @@
     /// </summary>
     public class HiveListItem
     {
+
         /// <summary>
         /// Gets or sets a hive identifier.
         /// </summary>
@@ -31,3 +32,5 @@
         public int HiveSectionCount { get; set; }
     }
 }
+
+
