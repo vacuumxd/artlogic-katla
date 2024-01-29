@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { MainPageComponent } from 'app/main-page/main-page.component';
 import { HiveFormComponent } from './hive-management/forms/hive-form.component';
 import { HiveSectionFormComponent } from './hive-management/forms/hive-section-form.component';
@@ -10,6 +9,9 @@ import { ProductFormComponent } from './product-management/forms/product-form.co
 import { ProductCategoryListComponent } from './product-management/lists/product-category-list.component';
 import { ProductCategoryProductListComponent } from './product-management/lists/product-category-product-list.component';
 import { ProductListComponent } from './product-management/lists/product-list.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -29,7 +31,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+
+  declarations: [ ],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule { }
+
+
+export class LayoutModule { }
+
+export class AppRoutingModule {
+}

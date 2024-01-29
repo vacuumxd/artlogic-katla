@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ROUTES, RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from 'app/app-routing.module';
+import { LayoutModule } from 'app/app-routing.module';
 import { AppComponent } from 'app/app.component';
 import { HiveFormComponent } from 'app/hive-management/forms/hive-form.component';
 import { HiveSectionFormComponent } from 'app/hive-management/forms/hive-section-form.component';
@@ -20,7 +24,26 @@ import { ProductListComponent } from 'app/product-management/lists/product-list.
 import { ProductCategoryService } from 'app/product-management/services/product-category.service';
 import { ProductService } from 'app/product-management/services/product.service';
 
+
+
+
 @NgModule({
+ 
+  imports: [
+    // Angular imports
+    
+    AppModule,
+    CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    LayoutModule,
+    FormsModule,
+    NgbModule.forRoot(),
+    HttpClientModule,
+    // Application imports
+    AppRoutingModule,
+  ],
   declarations: [
     AppComponent,
     MainPageComponent,
@@ -34,15 +57,6 @@ import { ProductService } from 'app/product-management/services/product.service'
     HiveSectionFormComponent,
     HiveSectionListComponent,
   ],
-  imports: [
-    // Angular imports
-    BrowserModule,
-    FormsModule,
-    NgbModule.forRoot(),
-    HttpClientModule,
-    // Application imports
-    AppRoutingModule,
-  ],
   providers: [
     // Angular providers
     HttpClient,
@@ -52,6 +66,7 @@ import { ProductService } from 'app/product-management/services/product.service'
     HiveService,
     HiveSectionService,
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

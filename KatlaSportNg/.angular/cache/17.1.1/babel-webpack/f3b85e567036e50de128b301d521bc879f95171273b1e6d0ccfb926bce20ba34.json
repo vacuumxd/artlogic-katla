@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class ProductCategory {\n  constructor(id, name, code, description, isDeleted, lastUpdated) {\n    this.id = id;\n    this.name = name;\n    this.code = code;\n    this.description = description;\n    this.isDeleted = isDeleted;\n    this.lastUpdated = lastUpdated;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

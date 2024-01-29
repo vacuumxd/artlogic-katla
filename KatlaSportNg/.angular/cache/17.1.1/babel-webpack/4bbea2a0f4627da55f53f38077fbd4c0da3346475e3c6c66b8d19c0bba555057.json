@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Hive {\n  constructor(id, name, code, address, isDeleted, lastUpdated) {\n    this.id = id;\n    this.name = name;\n    this.code = code;\n    this.address = address;\n    this.isDeleted = isDeleted;\n    this.lastUpdated = lastUpdated;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
