@@ -19,6 +19,7 @@ import { ProductCategoryProductListComponent } from 'app/product-management/list
 import { ProductListComponent } from 'app/product-management/lists/product-list.component';
 import { ProductCategoryService } from 'app/product-management/services/product-category.service';
 import { ProductService } from 'app/product-management/services/product.service';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ProductService } from 'app/product-management/services/product.service'
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     // Application imports
     AppRoutingModule,
   ],

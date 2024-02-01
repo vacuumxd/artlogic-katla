@@ -1,3 +1,21 @@
-<p>
-  hive-section-form works!
-</p>
+<div>
+  <h2>Hive Section Form</h2>
+  <form [formGroup]="hiveSectionForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" formControlName="name">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <div *ngIf="name.errors.required">Name is required.</div>
+      </div>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" formControlName="description"></textarea>
+    </div>
+    <button type="button" (click)="onBack()">Back</button>
+    <button type="submit" [disabled]="hiveSectionForm.invalid">Save</button>
+    <button type="button" (click)="onDelete()" *ngIf="isExistingSection">Delete</button>
+    <button type="button" (click)="onUndelete()" *ngIf="isExistingSection && hiveSectionForm.get('isDeleted').value">Undelete</button>
+    <button type="button" (click)="onPurge()" *ngIf="isExistingSection && hiveSectionForm.get('isDeleted').value">Purge</button>
+  </form>
+</div>
