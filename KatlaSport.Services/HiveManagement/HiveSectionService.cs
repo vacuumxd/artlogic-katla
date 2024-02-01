@@ -75,5 +75,20 @@ namespace KatlaSport.Services.HiveManagement
                 await _context.SaveChangesAsync();
             }
         }
+
+        public Task CreateHiveSectionAsync(UpdateHiveSectionRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteHiveSectionAsync(int hiveSectionId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateHiveSectionAsync(int hiveSectionId, UpdateHiveSectionRequest request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
