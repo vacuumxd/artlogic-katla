@@ -6,7 +6,7 @@
       <th scope="col">Code</th>
       <th scope="col">Name</th>
       <!-- TODO STEP 4 - Add column header here. -->
-      <th scope="col">Last Update</th>
+      <th scope="col">Products</th>
       <th scope="col"></th>
     </thead>
     <tbody>
@@ -15,7 +15,7 @@
         <td>{{productCategory.code}}</td>
         <td>{{productCategory.name}}</td>
         <!-- TODO STEP 4 - Add row cell here. -->
-        <td>{{productCategory.lastUpdated}}</td>
+        <td>{{productCategory.productCount}}</td>
         <td>
           <span class="btn-toolbar" role="toolbar" aria-label="Product category action buttons" style="display: block; white-space:nowrap;">
             <div class="btn-group mr-1" role="group" aria-label="Delete group" *ngIf="productCategory.isDeleted">

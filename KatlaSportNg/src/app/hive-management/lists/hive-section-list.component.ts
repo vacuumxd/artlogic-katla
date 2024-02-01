@@ -22,7 +22,23 @@ export class HiveSectionListComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(p => {
       this.hiveId = p['id'];
-      this.hiveService.getHiveSections(this.hiveId).subscribe(s => this.hiveSections = s);
-    })
+      this.loadSections();
+    });
+  }
+
+  loadSections() {
+    this.hiveService.getHiveSections(this.hiveId).subscribe(s => this.hiveSections = s);
+  }
+
+  onDelete(sectionId: number) {
+    this.hiveService.deleteHiveSection(sectionId).subscribe(() => {
+      this.loadSections();
+    });
+  }
+
+  onUndelete(sectionId: number) {
+    this.hiveService.undeleteHiveSection(sectionId).subscribe(() => {
+      this.loadSections();
+    });
   }
 }

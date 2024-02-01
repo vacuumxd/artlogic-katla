@@ -7,7 +7,7 @@
         <th scope="col">Name</th>
         <th scope="col">Code</th>
         <th scope="col">Is Deleted</th>
-        <th scope="col">Actions</th> <!-- Добавлен заголовок для действий -->
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -17,7 +17,9 @@
         <td>{{ section.code }}</td>
         <td>{{ section.isDeleted ? 'Yes' : 'No' }}</td>
         <td>
-          <button routerLink="/section/{{ section.id }}" class="btn btn-primary">Edit</button> <!-- Кнопка "Edit" с routerLink -->
+          <button routerLink="/section/{{ section.id }}" class="btn btn-primary">Edit</button>
+          <button *ngIf="section.isDeleted" class="btn btn-danger" (click)="onUndelete(section.id)">Undelete</button>
+          <button *ngIf="!section.isDeleted" class="btn btn-danger" (click)="onDelete(section.id)">Delete</button>
         </td>
       </tr>
     </tbody>

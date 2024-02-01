@@ -39,6 +39,16 @@ export class HiveService {
   }
 
   setHiveStatus(hiveId: number, deletedStatus: boolean): Observable<Object> {
-    return null;
+    var statusUpdate = { isDeleted: deletedStatus };
+    return this.http.put(`${this.url}${hiveId}`, statusUpdate);
+  }
+
+  deleteHiveSection(sectionId: number): Observable<Object> {
+    return this.http.delete(`${this.url}sections/${sectionId}`);
+  }
+
+  undeleteHiveSection(sectionId: number): Observable<Object> {
+    const statusUpdate = { isDeleted: false };
+    return this.http.put(`${this.url}sections/${sectionId}`, statusUpdate);
   }
 }
