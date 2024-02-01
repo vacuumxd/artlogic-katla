@@ -22,7 +22,7 @@ namespace KatlaSport.Services.HiveManagement
         /// </summary>
         /// <param name="context">A <see cref="IProductStoreHiveContext"/>.</param>
         /// <param name="userContext">A <see cref="IUserContext"/>.</param>
-        public  HiveService(IProductStoreHiveContext context, IUserContext userContext)
+        public HiveService(IProductStoreHiveContext context, IUserContext userContext)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _userContext = userContext ?? throw new ArgumentNullException();
@@ -68,7 +68,7 @@ namespace KatlaSport.Services.HiveManagement
             dbHive.LastUpdatedBy = _userContext.UserId;
             _context.Hives.Add(dbHive);
 
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             return Mapper.Map<Hive>(dbHive);
         }
@@ -93,7 +93,7 @@ namespace KatlaSport.Services.HiveManagement
             Mapper.Map(updateRequest, dbHive);
             dbHive.LastUpdatedBy = _userContext.UserId;
 
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             return Mapper.Map<Hive>(dbHive);
         }
@@ -114,7 +114,7 @@ namespace KatlaSport.Services.HiveManagement
             }
 
             _context.Hives.Remove(dbHive);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
         /// <inheritdoc/>
@@ -132,7 +132,7 @@ namespace KatlaSport.Services.HiveManagement
                 dbHive.IsDeleted = deletedStatus;
                 dbHive.LastUpdated = DateTime.UtcNow;
                 dbHive.LastUpdatedBy = _userContext.UserId;
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
         }
     }
