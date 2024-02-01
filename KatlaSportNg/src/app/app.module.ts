@@ -38,7 +38,6 @@ import { ProductService } from 'app/product-management/services/product.service'
     // Angular imports
     BrowserModule,
     FormsModule,
-    NgbModule.forRoot(),
     HttpClientModule,
     // Application imports
     AppRoutingModule,
